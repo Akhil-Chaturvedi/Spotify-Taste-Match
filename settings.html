@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Sync Settings</title>
+  <style>
+    body { width: 300px; font-family: sans-serif; padding: 10px; }
+    input { width: 95%; margin-bottom: 10px; }
+    button { width: 100%; padding: 8px; }
+    p { font-size: 14px; }
+    a { color: #1DB954; }
+    .status { margin-top: 10px; font-style: italic; }
+  </style>
+</head>
+<body>
+  <h3>Configuration</h3>
+  <p>To use this extension, you need your own Spotify API Client ID.</p>
+  <ol>
+    <li>Go to the <a href="https://developer.spotify.com/dashboard" target="_blank">Spotify Developer Dashboard</a>.</li>
+    <li>Create an app.</li>
+    <li>Copy the <strong>Client ID</strong> below.</li>
+    <li>Click "Edit Settings" and add this Redirect URI: <br>
+        <code id="redirect-uri-display">Loading...</code>
+    </li>
+  </ol>
+  <hr>
+  <label for="client-id">Spotify Client ID:</label>
+  <input type="text" id="client-id" placeholder="Paste your Client ID here">
+  
+  <button id="save-button">Save and Continue</button>
+
+  <div id="status-message" class="status"></div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

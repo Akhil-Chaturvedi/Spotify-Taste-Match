@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Spotify Blend Sync</title>
+  <style>
+    body { width: 300px; font-family: sans-serif; padding: 10px; }
+    input { width: 95%; margin-bottom: 10px; }
+    button { width: 100%; padding: 8px; }
+    .status { margin-top: 10px; font-style: italic; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <h3>Spotify Blend Sync</h3>
+  <!-- Login Section -->
+  <div id="login-section">
+    <p>Please log in with Spotify to begin.</p>
+    <button id="login-button">Login with Spotify</button>
+  </div>
+  <!-- Sync Section (hidden by default) -->
+  <div id="sync-section" class="hidden">
+    <p>Logged in as: <strong id="user-display-name"></strong></p>
+    <hr>
+    <label for="blend-url">Blend Playlist URL:</label>
+    <input type="text" id="blend-url" placeholder="Paste Blend URL here">
+    <label for="friend-username">Friend's Display Name:</label>
+    <input type="text" id="friend-username" placeholder="e.g., yoink">
+    <label for="target-url">Target Playlist URL:</label>
+    <input type="text" id="target-url" placeholder="Paste Target URL here">
+    <button id="sync-button">Sync Songs</button>
+  </div>
+  <div id="status-message" class="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

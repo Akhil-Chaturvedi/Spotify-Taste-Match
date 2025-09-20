@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Spotify Blend Sync",
+  "version": "4.0.0",
+  "description": "Syncs specific songs from a Blend playlist to another playlist.",
+  "permissions": [
+    "storage",
+    "identity",
+    "cookies",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.spotify.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["interceptor.js"],
+      "matches": ["https://open.spotify.com/*"]
+    }
+  ]
+}
